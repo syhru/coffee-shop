@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import OurBeans from "./pages/OurBeans";
 import Roastery from "./pages/Roastery";
 import Brewing from "./pages/Brewing";
+import Subscription from "./pages/Subscription";
 
 /**
  * App — Root component yang mengatur routing dan layout global.
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/our-beans" element={<OurBeans />} />
           <Route path="/roastery" element={<Roastery />} />
           <Route path="/brewing-guides" element={<Brewing />} />
+          <Route path="/subscription" element={<Subscription />} />
         </Routes>
 
         <Footer />
