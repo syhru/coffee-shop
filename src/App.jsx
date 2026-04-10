@@ -1,0 +1,31 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import OurBeans from "./pages/OurBeans";
+import Roastery from "./pages/Roastery";
+
+/**
+ * App — Root component yang mengatur routing dan layout global.
+ * Navbar & Footer tampil di semua halaman (persistent layout).
+ */
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-coffee-background">
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/our-beans" element={<OurBeans />} />
+          <Route path="/roastery" element={<Roastery />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+};
+
+export default App;

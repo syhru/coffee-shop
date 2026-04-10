@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #D4AF37;
+    color: #3E2723;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer utilities {
+  .editorial-shadow {
+    box-shadow: 0 12px 40px 0 rgba(62, 39, 35, 0.08);
+  }
+
+  .crema-gradient {
+    background: radial-gradient(circle at center, #8D6E63 0%, #3E2723 100%);
+  }
+}
