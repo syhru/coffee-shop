@@ -112,7 +112,7 @@ const BeanCard = ({ name, flavorNote, badge, price, image, imageAlt, isOffset })
             {price}
           </span>
           <button
-            className="bg-coffee-accent/15 dark:bg-coffee-deeproast text-coffee-primary dark:text-coffee-goldlight dark:border dark:border-coffee-outline px-5 py-2.5 rounded-xl font-sans text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:bg-coffee-accent hover:text-white dark:bg-coffee-goldlight dark:hover:text-coffee-midnight"
+            className="bg-coffee-accent/15 text-coffee-primary px-5 py-2.5 rounded-xl font-sans text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:bg-coffee-accent hover:text-white dark:bg-coffee-goldlight dark:text-coffee-midnight dark:hover:bg-coffee-cream dark:hover:text-coffee-midnight"
             aria-label={`Tambahkan ${name} ke keranjang`}
           >
             Add to Cart

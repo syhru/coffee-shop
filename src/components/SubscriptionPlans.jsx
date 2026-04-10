@@ -102,7 +102,7 @@ const PlanCard = ({ name, subtitle, price, features, badge, isHighlighted }) => 
         </ul>
 
         <button
-          className="w-full py-4 bg-coffee-accent dark:bg-coffee-goldlight text-coffee-primary dark:text-coffee-midnight rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-coffee-accent/80 dark:hover:opacity-90 transition-colors duration-300"
+          className="w-full py-4 bg-coffee-accent text-coffee-primary rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-coffee-accent/80 transition-colors duration-300 dark:bg-coffee-goldlight dark:text-coffee-midnight dark:hover:bg-coffee-cream dark:hover:text-coffee-midnight"
           aria-label={`Berlangganan paket ${name}`}
         >
           Subscribe Now
@@ -143,7 +143,7 @@ const PlanCard = ({ name, subtitle, price, features, badge, isHighlighted }) => 
       </ul>
 
       <button
-        className="w-full py-4 bg-coffee-primary dark:bg-coffee-midnight text-white dark:text-coffee-cream rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-coffee-secondary dark:bg-coffee-goldlight dark:hover:text-coffee-midnight transition-colors duration-300"
+        className="w-full py-4 bg-coffee-primary text-white rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-coffee-secondary transition-colors duration-300 dark:bg-coffee-deeproast dark:text-coffee-cream dark:hover:bg-coffee-goldlight dark:hover:text-coffee-midnight"
         aria-label={`Berlangganan paket ${name}`}
       >
         Subscribe Now
