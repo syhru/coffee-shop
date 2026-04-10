@@ -4,14 +4,23 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         coffee: {
-          primary: '#3E2723',   // Espresso
-          secondary: '#8D6E63', // Mocha
-          background: '#EFEBE9', // Latte
-          accent: '#D4AF37',    // Emas
+          // --- Light Mode ---
+          primary: '#3E2723',     // Espresso
+          secondary: '#8D6E63',   // Mocha
+          background: '#EFEBE9',  // Latte
+          accent: '#D4AF37',      // Emas
+          
+          // --- Dark Mode (Stitch Original) ---
+          midnight: '#050505',    // Hitam pekat untuk Background Utama & Navbar
+          deeproast: '#151515',   // Abu-abu sangat gelap untuk Card & Surface
+          cream: '#F5F5F5',       // Putih bersih untuk teks utama
+          goldlight: '#FFBF00',   // Kuning/Amber menyala khas Stitch
+          outline: '#2C2C2C',     // Garis border tipis elegan
         }
       },
       fontFamily: {

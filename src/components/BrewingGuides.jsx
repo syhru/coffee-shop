@@ -51,14 +51,14 @@ const BrewCard = ({ title, badge, duration, description, image, imageAlt }) => {
   return (
     <article className="group">
       {/* Image Container */}
-      <div className="aspect-[4/5] bg-coffee-secondary/5 mb-8 overflow-hidden relative rounded-2xl">
+      <div className="aspect-[4/5] bg-coffee-secondary/5 dark:bg-coffee-deeproast mb-8 overflow-hidden relative rounded-2xl dark:border dark:border-coffee-outline">
         <img
           src={image}
           alt={imageAlt}
           className="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
         />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-coffee-primary text-white text-[10px] uppercase tracking-widest rounded-full font-bold">
+          <span className="px-3 py-1 bg-coffee-primary dark:bg-coffee-goldlight text-white dark:text-coffee-midnight text-[10px] uppercase tracking-widest rounded-full font-bold">
             {badge}
           </span>
         </div>
@@ -67,21 +67,21 @@ const BrewCard = ({ title, badge, duration, description, image, imageAlt }) => {
       {/* Card Content */}
       <div className="space-y-4">
         <div className="flex justify-between items-end">
-          <h3 className="text-3xl font-serif text-coffee-primary italic">
+          <h3 className="text-3xl font-serif text-coffee-primary dark:text-coffee-cream italic">
             {title}
           </h3>
-          <span className="text-xs font-sans text-coffee-secondary uppercase tracking-widest pb-1">
+          <span className="text-xs font-sans text-coffee-secondary dark:text-coffee-cream uppercase tracking-widest pb-1">
             {duration}
           </span>
         </div>
 
-        <p className="text-coffee-secondary font-sans text-sm leading-relaxed mb-6">
+        <p className="text-coffee-secondary dark:text-coffee-cream font-sans text-sm leading-relaxed mb-6">
           {description}
         </p>
 
         <a
           href="#"
-          className="inline-flex items-center text-coffee-primary font-bold text-xs uppercase tracking-widest group-hover:gap-4 gap-2 transition-all duration-300"
+          className="inline-flex items-center text-coffee-primary dark:text-coffee-goldlight font-bold text-xs uppercase tracking-widest group-hover:gap-4 gap-2 transition-all duration-300"
           aria-label={`Baca panduan ${title}`}
         >
           Read Guide
@@ -117,13 +117,13 @@ const BrewingGuides = () => {
       {/* Section Header */}
       <header className="px-6 md:px-8 max-w-7xl mx-auto mb-16 md:mb-20">
         <div className="max-w-2xl">
-          <span className="text-coffee-accent font-sans text-xs font-bold uppercase tracking-widest mb-4 block">
+          <span className="text-coffee-accent dark:text-coffee-goldlight font-sans text-xs font-bold uppercase tracking-widest mb-4 block">
             The Ritual of Preparation
           </span>
-          <h2 className="text-5xl md:text-7xl font-serif text-coffee-primary italic leading-tight tracking-tighter mb-8">
+          <h2 className="text-5xl md:text-7xl font-serif text-coffee-primary dark:text-coffee-cream italic leading-tight tracking-tighter mb-8">
             Master Your Brew
           </h2>
-          <p className="text-lg text-coffee-secondary font-sans leading-relaxed max-w-xl">
+          <p className="text-lg text-coffee-secondary dark:text-coffee-cream font-sans leading-relaxed max-w-xl">
             Great coffee begins with the source, but ends with the technique.
             Explore our curated guides to perfecting the craft of slow-pour
             coffee from the comfort of your kitchen.
@@ -150,16 +150,16 @@ const BrewingGuides = () => {
 
       {/* Secondary CTA Section */}
       <div className="mt-24 md:mt-32 px-6 md:px-8">
-        <div className="max-w-7xl mx-auto bg-coffee-background py-16 md:py-24 px-8 md:px-12 text-center rounded-2xl">
-          <h2 className="font-serif text-3xl text-coffee-primary italic mb-6">
+        <div className="max-w-7xl mx-auto bg-coffee-background dark:bg-coffee-deeproast dark:border dark:border-coffee-outline py-16 md:py-24 px-8 md:px-12 text-center rounded-2xl transition-colors duration-300">
+          <h2 className="font-serif text-3xl text-coffee-primary dark:text-coffee-cream italic mb-6">
             Missing the right gear?
           </h2>
-          <p className="font-sans text-coffee-secondary max-w-md mx-auto mb-10 leading-relaxed">
+          <p className="font-sans text-coffee-secondary dark:text-coffee-cream max-w-md mx-auto mb-10 leading-relaxed">
             Our roastery shop stocks the exact tools used in our guides, curated
             for their durability and precision.
           </p>
           <button
-            className="crema-gradient text-white px-10 py-4 font-sans font-bold uppercase tracking-widest text-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 rounded-xl editorial-shadow"
+            className="crema-gradient dark:!bg-none dark:bg-coffee-goldlight text-white dark:text-coffee-midnight px-10 py-4 font-sans font-bold uppercase tracking-widest text-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 rounded-xl editorial-shadow dark:shadow-coffee-goldlight"
             aria-label="Belanja peralatan seduh kopi"
           >
             Shop Brewing Equipment

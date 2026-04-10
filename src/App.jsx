@@ -15,7 +15,7 @@ import Subscription from "./pages/Subscription";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-coffee-background">
+      <div className="min-h-screen bg-coffee-background dark:bg-coffee-midnight transition-colors duration-300">
         <Navbar />
 
         <Routes>

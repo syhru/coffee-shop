@@ -83,15 +83,15 @@ const BeanCard = ({ name, flavorNote, badge, price, image, imageAlt, isOffset })
       className={`flex flex-col group ${isOffset ? "md:mt-12" : ""}`}
     >
       {/* Image Container */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-coffee-secondary/5 rounded-2xl mb-8">
+      <div className="relative aspect-[4/5] overflow-hidden bg-coffee-secondary/5 dark:bg-coffee-deeproast rounded-2xl mb-8 dark:border dark:border-coffee-outline">
         <img
           src={image}
           alt={imageAlt}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 dark:grayscale-[0.2] dark:group-hover:grayscale-0"
         />
         {/* Flavor Badge */}
         <div className="absolute top-4 right-4">
-          <span className="bg-coffee-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+          <span className="bg-coffee-primary dark:bg-coffee-goldlight text-white dark:text-coffee-midnight px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
             {badge}
           </span>
         </div>
@@ -99,20 +99,20 @@ const BeanCard = ({ name, flavorNote, badge, price, image, imageAlt, isOffset })
 
       {/* Card Content */}
       <div className="flex flex-col flex-grow px-2">
-        <h3 className="font-serif text-2xl text-coffee-primary mb-2">
+        <h3 className="font-serif text-2xl text-coffee-primary dark:text-coffee-cream mb-2">
           {name}
         </h3>
-        <p className="font-sans text-coffee-secondary mb-6 text-sm italic">
+        <p className="font-sans text-coffee-secondary dark:text-coffee-cream mb-6 text-sm italic">
           {flavorNote}
         </p>
 
         {/* Price & CTA */}
         <div className="mt-auto flex items-center justify-between">
-          <span className="font-serif text-xl text-coffee-primary">
+          <span className="font-serif text-xl text-coffee-primary dark:text-coffee-goldlight">
             {price}
           </span>
           <button
-            className="bg-coffee-accent/15 text-coffee-primary px-5 py-2.5 rounded-xl font-sans text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:bg-coffee-accent hover:text-white"
+            className="bg-coffee-accent/15 dark:bg-coffee-deeproast text-coffee-primary dark:text-coffee-goldlight dark:border dark:border-coffee-outline px-5 py-2.5 rounded-xl font-sans text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:bg-coffee-accent hover:text-white dark:bg-coffee-goldlight dark:hover:text-coffee-midnight"
             aria-label={`Tambahkan ${name} ke keranjang`}
           >
             Add to Cart
@@ -147,20 +147,20 @@ const OurSignatureBeans = () => {
     >
       {/* Section Header */}
       <header className="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-20 text-center">
-        <span className="text-coffee-accent font-sans text-xs font-bold uppercase tracking-widest block mb-4">
+        <span className="text-coffee-accent dark:text-coffee-goldlight font-sans text-xs font-bold uppercase tracking-widest block mb-4">
           Curated Selection
         </span>
-        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-coffee-primary tracking-tight italic">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-coffee-primary dark:text-coffee-cream dark:[text-shadow:0_0_15px_rgba(229,192,88,0.3)] tracking-tight italic">
           Our Signature Beans
         </h2>
         <div
-          className="mt-6 w-12 h-px bg-coffee-secondary/40 mx-auto"
+          className="mt-6 w-12 h-px bg-coffee-secondary/40 dark:bg-coffee-goldlight mx-auto"
           aria-hidden="true"
         />
       </header>
 
       {/* Product Grid */}
-      <div className="bg-coffee-background py-16 md:py-24">
+      <div className="bg-coffee-background dark:bg-coffee-midnight transition-colors duration-300 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 lg:gap-x-12 gap-y-16 md:gap-y-24">
             {BEANS_DATA.map((bean) => (
@@ -181,11 +181,11 @@ const OurSignatureBeans = () => {
 
       {/* Bottom CTA */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-20 text-center">
-        <p className="font-sans text-coffee-secondary mb-4 italic">
+        <p className="font-sans text-coffee-secondary dark:text-coffee-cream mb-4 italic">
           Can&apos;t find your match?
         </p>
         <button
-          className="text-coffee-primary font-sans text-sm font-semibold uppercase tracking-widest border-b-2 border-coffee-primary pb-1 hover:text-coffee-accent hover:border-coffee-accent transition-all duration-300"
+          className="text-coffee-primary font-sans text-sm font-semibold uppercase tracking-widest border-b-2 border-coffee-primary pb-1 hover:text-coffee-accent hover:border-coffee-accent transition-all duration-300 dark:text-coffee-goldlight dark:border-coffee-outline dark:hover:border-coffee-outline-goldlight"
           aria-label="Lihat semua pilihan biji kopi"
         >
           Explore All Origins
