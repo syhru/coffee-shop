@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 /**
  * Navbar — Komponen navigasi global yang tampil di semua halaman.
@@ -8,6 +8,23 @@ import { Link, NavLink } from "react-router-dom";
  */
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  const isSolid = !isHomePage || isScrolled;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -20,12 +37,13 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className="fixed top-0 w-full z-50 bg-black/20 dark:bg-black/20 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-5 max-w-full mx-auto border-b border-transparent transition-colors duration-300"
+        className={`fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-8 py-5 max-w-full mx-auto border-b transition-all duration-500 ${isSolid ? 'bg-coffee-background shadow-md border-coffee-secondary/20' : 'bg-transparent border-transparent'} dark:bg-black/20 dark:backdrop-blur-md`}
         aria-label="Navigasi utama"
       >
         <Link
           to="/"
-          className="text-2xl font-serif italic text-coffee-goldlight dark:text-coffee-goldlight"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className={`text-2xl font-serif italic transition-colors duration-500 ${isSolid ? 'text-coffee-primary' : 'text-[#E5C058]'} dark:text-coffee-goldlight`}
         >
           The Artisanal Monograph
         </Link>
@@ -33,49 +51,29 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-10">
           <NavLink
             to="/our-beans"
-            className={({ isActive }) =>
-              `transition-all duration-300 font-sans text-sm tracking-wide ${
-                isActive
-                  ? "text-coffee-primary border-b border-coffee-primary dark:text-coffee-goldlight dark:border-coffee-goldlight"
-                  : "text-white/60 dark:text-white/60 border-b border-transparent hover:text-coffee-cream dark:hover:text-coffee-goldlight"
-              }`
-            }
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className={`font-label text-sm tracking-wide transition-colors duration-500 ${isSolid ? 'text-coffee-secondary hover:text-coffee-primary' : 'text-[#EFEBE9]/80 hover:text-[#E5C058]'} dark:text-white/70 dark:hover:text-coffee-goldlight`}
           >
             Our Beans
           </NavLink>
           <NavLink
             to="/roastery"
-            className={({ isActive }) =>
-              `transition-all duration-300 font-sans text-sm tracking-wide ${
-                isActive
-                  ? "text-coffee-primary border-b border-coffee-primary dark:text-coffee-goldlight dark:border-coffee-goldlight"
-                  : "text-white/60 dark:text-white/60 border-b border-transparent hover:text-coffee-cream dark:hover:text-coffee-goldlight"
-              }`
-            }
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className={`font-label text-sm tracking-wide transition-colors duration-500 ${isSolid ? 'text-coffee-secondary hover:text-coffee-primary' : 'text-[#EFEBE9]/80 hover:text-[#E5C058]'} dark:text-white/70 dark:hover:text-coffee-goldlight`}
           >
             Roastery
           </NavLink>
           <NavLink
             to="/brewing-guides"
-            className={({ isActive }) =>
-              `transition-all duration-300 font-sans text-sm tracking-wide ${
-                isActive
-                  ? "text-coffee-primary border-b border-coffee-primary dark:text-coffee-goldlight dark:border-coffee-goldlight"
-                  : "text-white/60 dark:text-white/60 border-b border-transparent hover:text-coffee-cream dark:hover:text-coffee-goldlight"
-              }`
-            }
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className={`font-label text-sm tracking-wide transition-colors duration-500 ${isSolid ? 'text-coffee-secondary hover:text-coffee-primary' : 'text-[#EFEBE9]/80 hover:text-[#E5C058]'} dark:text-white/70 dark:hover:text-coffee-goldlight`}
           >
             Brewing Guides
           </NavLink>
           <NavLink
             to="/subscription"
-            className={({ isActive }) =>
-              `transition-all duration-300 font-sans text-sm tracking-wide ${
-                isActive
-                  ? "text-coffee-primary border-b border-coffee-primary dark:text-coffee-goldlight dark:border-coffee-goldlight"
-                  : "text-white/60 dark:text-white/60 border-b border-transparent hover:text-coffee-cream dark:hover:text-coffee-goldlight"
-              }`
-            }
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className={`font-label text-sm tracking-wide transition-colors duration-500 ${isSolid ? 'text-coffee-secondary hover:text-coffee-primary' : 'text-[#EFEBE9]/80 hover:text-[#E5C058]'} dark:text-white/70 dark:hover:text-coffee-goldlight`}
           >
             Subscription
           </NavLink>

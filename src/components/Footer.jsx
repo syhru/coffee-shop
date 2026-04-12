@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 /**
@@ -148,8 +147,8 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="pt-8 border-t border-coffee-secondary/20 dark:border-coffee-outline flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-[11px] text-coffee-secondary dark:text-white/70 font-sans uppercase tracking-widest">
-          © 2024 The Artisanal Monograph. Crafted with intention.
+        <div className="text-[11px] text-coffee-secondary dark:text-white/70 font-sans tracking-widest">
+          @2026 Syhru. All rights reserved
         </div>
         <div className="flex gap-8">
           <a className="text-[11px] text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Terms of Service</a>

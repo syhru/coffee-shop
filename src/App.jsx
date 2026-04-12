@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -15,6 +16,7 @@ import Subscription from "./pages/Subscription";
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-coffee-background dark:bg-coffee-midnight transition-colors duration-300">
         <Navbar />
 
