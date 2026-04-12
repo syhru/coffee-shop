@@ -1,8 +1,6 @@
+import { motion as Motion } from 'framer-motion';
 
-/**
- * TastingNote — Sub-komponen untuk menampilkan catatan rasa kopi.
- * Digunakan di grid bawah hero text.
- */
+
 const TastingNote = ({ title, description }) => {
   return (
     <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-xl hover:bg-white/15 transition-all duration-300">
@@ -16,10 +14,7 @@ const TastingNote = ({ title, description }) => {
   );
 };
 
-/**
- * FloatingChip — Badge kecil melayang di atas gambar hero,
- * menampilkan profil rasa biji kopi unggulan.
- */
+
 const FloatingChip = ({ flavor, origin }) => {
   return (
     <div className="absolute -bottom-6 -left-6 bg-black/30 dark:bg-black/30 backdrop-blur-md p-6 editorial-shadow rounded-xl max-w-[200px] border border-white/20 z-20">
@@ -51,11 +46,28 @@ const FloatingChip = ({ flavor, origin }) => {
  * - coffee-background (#EFEBE9) untuk background
  * - coffee-accent (#D4AF37) untuk badge & CTA
  */
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.3 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } 
+  }
+};
+
 const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className="relative bg-transparent flex-grow flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-24 py-6 md:py-8 lg:py-10 pt-32 lg:pt-32 min-h-screen gap-12 overflow-hidden"
+      className="relative bg-transparent flex-grow flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-24 py-6 md:py-8 lg:py-48 pt-32 lg:pt-32 min-h-screen gap-12 overflow-hidden"
       aria-label="Hero utama kedai kopi"
     >
       {/* ===== BACKGROUND VIDEO ===== */}
@@ -69,28 +81,33 @@ const HeroSection = () => {
       />
 
       {/* ===== TEXT CONTENT ===== */}
-      <div className="w-full md:w-1/2 flex flex-col items-start relative z-20 drop-shadow-xl">
+      <Motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="w-full md:w-1/2 flex flex-col items-start relative z-20 drop-shadow-xl"
+      >
         {/* Season Badge */}
-        <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 bg-[#1F1814] rounded-full border border-coffee-outline/30">
+        <Motion.div variants={itemVariants} className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 bg-[#1F1814] rounded-full border border-coffee-outline/30">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#E5C058]">
             Season&apos;s Selection
           </span>
-        </div>
+        </Motion.div>
 
         {/* Headline — satu h1 per halaman (a11y rule) */}
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#EFEBE9] leading-[1.1] mb-4 -tracking-[0.02em]">
+        <Motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#EFEBE9] leading-[1.1] mb-4 -tracking-[0.02em]">
           Seni di Setiap{" "}
           <span className="italic font-normal text-[#E5C058]">Seduhan</span>
-        </h1>
+        </Motion.h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-lg md:text-xl text-[#EFEBE9]/90 max-w-md mb-6 leading-relaxed">
+        <Motion.p variants={itemVariants} className="font-sans text-lg md:text-xl text-[#EFEBE9]/90 max-w-md mb-6 leading-relaxed">
           Nikmati perpaduan biji kopi pilihan terbaik yang disangrai dengan
           penuh dedikasi untuk mengawali hari Anda.
-        </p>
+        </Motion.p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <Motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <button
             className="bg-[#E5C058] text-[#120E0B] px-8 py-4 rounded-xl font-sans text-sm font-semibold uppercase tracking-[0.05rem] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 editorial-shadow"
             aria-label="Pesan kopi sekarang"
@@ -107,10 +124,10 @@ const HeroSection = () => {
               arrow_forward
             </span>
           </button>
-        </div>
+        </Motion.div>
 
         {/* Tasting Notes Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <Motion.div variants={itemVariants} className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
           <TastingNote
             title="Single Origin"
             description="Ethically sourced from high-altitude volcanic soil."
@@ -119,8 +136,8 @@ const HeroSection = () => {
             title="Small Batch"
             description="Roasted daily to preserve volatile aromatic oils."
           />
-        </div>
-      </div>
+        </Motion.div>
+      </Motion.div>
 
       {/* ===== IMAGE COMPOSITION ===== */}
       <div className="w-full md:w-1/2 relative flex justify-center items-center z-20">

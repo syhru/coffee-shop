@@ -1,4 +1,6 @@
 
+import { motion } from 'framer-motion';
+
 /**
  * Data paket subscription.
  * Setiap paket memiliki fitur-fitur berbeda dan styling tersendiri.
@@ -166,6 +168,15 @@ const PlanCard = ({ name, subtitle, price, features, badge, isHighlighted }) => 
  * - coffee-accent (#D4AF37) → badge, checkmark icons, CTA highlighted
  * - coffee-background (#EFEBE9) → card background, section bg
  */
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: "easeOut" } 
+  }
+};
+
 const SubscriptionPlans = () => {
   return (
     <section
@@ -206,7 +217,7 @@ const SubscriptionPlans = () => {
       </div>
 
       {/* ===== PRICING CARDS SECTION ===== */}
-      <div className="bg-coffee-secondary/5 dark:bg-transparent transition-colors duration-300 py-16 md:py-24 lg:py-32 px-6">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={sectionVariants} className="bg-coffee-secondary/5 dark:bg-transparent transition-colors duration-300 py-16 md:py-24 lg:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
@@ -239,10 +250,10 @@ const SubscriptionPlans = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* ===== BENEFIT SECTION ===== */}
-      <div className="bg-white dark:bg-coffee-midnight transition-colors duration-300 py-16 md:py-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={sectionVariants} className="bg-white dark:bg-coffee-midnight transition-colors duration-300 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Image */}
           <div className="aspect-square bg-coffee-background dark:bg-coffee-deeproast overflow-hidden rounded-2xl dark:border dark:border-coffee-outline">
@@ -271,7 +282,7 @@ const SubscriptionPlans = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

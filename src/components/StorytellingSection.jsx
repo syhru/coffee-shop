@@ -1,7 +1,7 @@
 
 const StorytellingSection = () => {
   return (
-    <section className="py-24 px-6 md:px-16 lg:px-24 bg-white dark:bg-[#120E0B] overflow-hidden">
+    <section className="py-24 px-6 md:px-16 lg:px-24 bg-coffee-secondary/5 dark:bg-[#120E0B] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         <div className="w-full lg:w-3/5 order-2 lg:order-1 relative">
           <div className="relative rounded-2xl overflow-hidden editorial-shadow group aspect-[16/10] md:aspect-[16/9]">

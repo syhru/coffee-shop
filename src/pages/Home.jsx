@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import HeroSection from "../components/HeroSection";
-import StorytellingSection from "../components/StorytellingSection";
-import SignatureSelection from "../components/SignatureSelection";
+import { motion } from "framer-motion";
 import ArtisanalGallery from "../components/ArtisanalGallery";
+import HeroSection from "../components/HeroSection";
 import PhilosophySection from "../components/PhilosophySection";
 import ProductSpotlight from "../components/ProductSpotlight";
+import SignatureSelection from "../components/SignatureSelection";
+import StorytellingSection from "../components/StorytellingSection";
 
 /**
  * Data kutipan (quotes) untuk carousel
@@ -20,6 +21,15 @@ const quotes = [
  * Home — Halaman utama landing page.
  * Berisi HeroSection dan Signature Quote Carousel.
  */
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: "easeOut" } 
+  }
+};
+
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -45,9 +55,13 @@ const Home = () => {
     <main className="min-h-screen flex flex-col">
       <HeroSection />
       
-      <StorytellingSection />
+      <div className="max-w-[1920px] mx-auto w-full relative z-10 -mt-16 md:-mt-32 bg-coffee-background dark:bg-coffee-midnight rounded-[40px] md:rounded-[60px] lg:rounded-[80px] shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.3)] overflow-hidden mb-0">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+          <StorytellingSection />
+        </motion.div>
 
       {/* Signature Quote Carousel Section */}
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
       <section
         className="bg-coffee-secondary/5 dark:bg-coffee-deeproast dark:border-y dark:border-coffee-outline py-16 md:py-24 px-6 md:px-16 text-center transition-colors duration-300"
         aria-label="Kutipan khas kedai kopi"
@@ -76,11 +90,21 @@ const Home = () => {
           </div>
         </div>
       </section>
+      </motion.div>
 
-      <SignatureSelection />
-      <ArtisanalGallery />
-      <PhilosophySection />
-      <ProductSpotlight />
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+        <SignatureSelection />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+        <ArtisanalGallery />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+        <PhilosophySection />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+        <ProductSpotlight />
+      </motion.div>
+      </div>
     </main>
   );
 };
