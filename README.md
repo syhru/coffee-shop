@@ -2,7 +2,7 @@
 
 A premium, highly responsive e-commerce and brand-storytelling landing page for an artisanal coffee roastery. Engineered with precise attention to visual aesthetics, mobile-first performance, and modern web accessibility practices.
 
-![The Artisanal Monograph Preview](./public/The%20Artisanal%20Monograph.jpeg)
+![The Artisanal Monograph Preview](./public/The%20Artisanal%20Monoograph.jpeg)
 
 ## 🌟 Key Features
 
