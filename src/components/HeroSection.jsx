@@ -56,7 +56,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className="flex-grow flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-24 py-12 md:py-20 gap-12 overflow-hidden"
+      className="flex-grow flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-24 py-6 md:py-8 lg:py-10 min-h-[calc(100vh-6rem)] gap-12 overflow-hidden"
       aria-label="Hero utama kedai kopi"
     >
       {/* ===== TEXT CONTENT ===== */}
@@ -69,13 +69,13 @@ const HeroSection = () => {
         </div>
 
         {/* Headline — satu h1 per halaman (a11y rule) */}
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-coffee-primary dark:text-coffee-cream leading-[1.1] mb-6 -tracking-[0.02em]">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-coffee-primary dark:text-coffee-cream leading-[1.1] mb-4 -tracking-[0.02em]">
           Seni di Setiap{" "}
           <span className="italic font-normal dark:text-coffee-goldlight">Seduhan</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-lg md:text-xl text-coffee-secondary dark:text-coffee-cream max-w-md mb-10 leading-relaxed">
+        <p className="font-sans text-lg md:text-xl text-coffee-secondary dark:text-coffee-cream max-w-md mb-6 leading-relaxed">
           Nikmati perpaduan biji kopi pilihan terbaik yang disangrai dengan
           penuh dedikasi untuk mengawali hari Anda.
         </p>
@@ -101,7 +101,7 @@ const HeroSection = () => {
         </div>
 
         {/* Tasting Notes Grid */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-8 border-l-2 border-coffee-secondary/20 dark:border-coffee-outline pl-8">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8 border-l-2 border-coffee-secondary/20 dark:border-coffee-outline pl-8">
           <TastingNote
             title="Single Origin"
             description="Ethically sourced from high-altitude volcanic soil."
@@ -122,7 +122,7 @@ const HeroSection = () => {
         />
 
         {/* Main Visual Container */}
-        <div className="relative w-full aspect-[4/5] md:aspect-square group">
+        <div className="relative aspect-[4/5] md:aspect-square max-h-[500px] lg:max-h-[550px] w-auto mx-auto group">
           {/* Asymmetric Frame */}
           <div
             className="absolute inset-0 bg-coffee-secondary/10 dark:bg-coffee-deeproast translate-x-4 translate-y-4 rounded-2xl -rotate-1 transition-transform group-hover:rotate-0 duration-500 dark:border dark:border-coffee-outline"

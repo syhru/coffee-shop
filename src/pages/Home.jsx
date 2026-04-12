@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection";
+import StorytellingSection from "../components/StorytellingSection";
+import SignatureSelection from "../components/SignatureSelection";
+import ArtisanalGallery from "../components/ArtisanalGallery";
+import PhilosophySection from "../components/PhilosophySection";
+import ProductSpotlight from "../components/ProductSpotlight";
 
 /**
  * Data kutipan (quotes) untuk carousel
@@ -39,6 +44,8 @@ const Home = () => {
   return (
     <main className="pt-24 min-h-screen flex flex-col">
       <HeroSection />
+      
+      <StorytellingSection />
 
       {/* Signature Quote Carousel Section */}
       <section
@@ -47,8 +54,8 @@ const Home = () => {
       >
         <div className="flex flex-col items-center justify-center">
           {/* Ikon Kutipan Statis */}
-          <span className="material-symbols-outlined text-4xl text-coffee-secondary/40 dark:text-coffee-cream/40 mb-6">
-            format_quote
+          <span className="material-symbols-outlined text-6xl text-coffee-secondary/60 dark:text-coffee-cream/40 mb-6">
+            ❞
           </span>
           
           {/* Konten Teranimasi */}
@@ -69,6 +76,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <SignatureSelection />
+      <ArtisanalGallery />
+      <PhilosophySection />
+      <ProductSpotlight />
     </main>
   );
 };

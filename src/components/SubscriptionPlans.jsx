@@ -1,4 +1,3 @@
-import React from "react";
 
 /**
  * Data paket subscription.
@@ -9,7 +8,7 @@ const PLANS_DATA = [
     id: "casual-drinker",
     name: "Casual Drinker",
     subtitle: "Perfect for the weekend brewer.",
-    price: "$24",
+    price: "IDR. 410.040",
     features: [
       "1 Bag (12oz) Fresh Roasted Coffee",
       "Tasting Notes & Origin Map",
@@ -21,7 +20,7 @@ const PLANS_DATA = [
     id: "coffee-enthusiast",
     name: "Coffee Enthusiast",
     subtitle: "For the daily ritual of discovery.",
-    price: "$42",
+    price: "IDR. 717.570",
     badge: "Most Loved",
     features: [
       "2 Bags (12oz) Rotating Varietals",
@@ -35,7 +34,7 @@ const PLANS_DATA = [
     id: "roastery-pro",
     name: "Roastery Pro",
     subtitle: "Maximum variety for the true connoisseur.",
-    price: "$78",
+    price: "IDR. 1.332.630",
     features: [
       "4 Bags (12oz) Full Roast Spectrum",
       "25% Off All Single Purchases",
