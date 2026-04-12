@@ -1,4 +1,3 @@
-import React from 'react';
 
 const StorytellingSection = () => {
   return (
@@ -9,7 +8,7 @@ const StorytellingSection = () => {
             <img
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               alt="A barista skillfully pouring milk into an espresso to create complex, elegant latte art in a white ceramic cup, soft morning light hitting the counter"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPvmmAIwZXWSIXTJXStEuc_wu5JlvGfmVhVHDGJ7sF20co27xi1skL6yHsxDOk39hAXXQoMzDndPY4U0PaDeI7nI3dlMrfIqtrODj4-6Fzr3BQtI7U4SRyCn3ECQtFvt6H2rNXA-dZ5NAKferip39AVBjBHQEBXewnS5pJDArEI8ol_obU7MqDkmxjZ8cLFwSokWdrhBnnaLUV1i7bvswzvBV_SsAp5LpKnQUSkUNTjK6QyPlUt0cf6gjHKRsVtkVl8JnukWB9EMI"
+              src="https://i.pinimg.com/1200x/5c/24/ba/5c24bae44d203eb3929628959c150389.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-coffee-primary/80 dark:from-coffee-midnight/80 to-transparent opacity-60"></div>
             <div className="absolute bottom-8 left-8 text-white dark:text-coffee-cream">
@@ -27,7 +26,7 @@ const StorytellingSection = () => {
               </h2>
               <div className="w-16 h-1 bg-coffee-primary/20 dark:bg-coffee-outline mb-8"></div>
               <p className="font-sans text-lg text-coffee-secondary dark:text-coffee-cream/80 leading-relaxed mb-6">
-                Setiap biji kopi yang kami pilih membawa karakteristik unik dari tanah tempatnya tumbuh. Dari aroma floral yang lembut hingga body cokelat yang kaya, kami memastikan setiap profil rasa terekstraksi sempurna.
+                Setiap biji kopi yang kami pilih membawa karakteristik unik dari tanah tempatnya tumbuh. Dari aroma floral yang lembut hingga body coklat yang kaya, kami memastikan setiap profil rasa terekstraksi sempurna.
               </p>
               <p className="font-sans text-base text-coffee-secondary/80 dark:text-coffee-cream/60 italic border-l-2 border-coffee-secondary/30 dark:border-coffee-outline pl-6 py-2">
                 Kami percaya bahwa kopi bukan sekadar minuman, melainkan jembatan antara petani, roaster, dan Anda. Setiap cangkir adalah sebuah narasi tentang perjalanan dari kebun hingga ke tangan Anda.

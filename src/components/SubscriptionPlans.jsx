@@ -174,11 +174,11 @@ const SubscriptionPlans = () => {
       aria-label="Paket berlangganan kopi"
     >
       {/* ===== HERO BANNER ===== */}
-      <div className="relative h-[500px] md:h-[614px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[500px] md:h-[655px] bottom-12 flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div
-            className="absolute inset-0 bg-coffee-primary/40 dark:bg-coffee-midnight mix-blend-multiply z-10"
+            className="absolute inset-0 bg-coffee-primary/40 dark:bg-coffee-primary/60 mix-blend-multiply z-10"
             aria-hidden="true"
           />
           <img

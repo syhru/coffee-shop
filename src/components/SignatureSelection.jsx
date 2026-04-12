@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SignatureSelection = () => {
   return (
@@ -26,7 +25,7 @@ const SignatureSelection = () => {
             <span className="text-coffee-accent dark:text-coffee-goldlight font-sans uppercase tracking-[0.2em] text-xs mb-4 block">The Artisanal Selection</span>
             <h2 className="font-serif text-4xl text-coffee-primary dark:text-coffee-cream mb-6">Mahakarya Biji Kopi <span className="italic">Signature</span> Kami</h2>
             <p className="font-sans text-lg text-coffee-secondary dark:text-coffee-cream/80 leading-relaxed mb-8">
-              Setiap musim, kami melakukan kurasi ketat untuk menghadirkan biji kopi signature yang mendefinisikan standar keunggulan kami. Biji kopi ini dipanen pada puncak kematangannya, memastikan setiap profil rasa—dari nuansa buah yang cerah hingga kekentalan cokelat yang dalam—terekspresi dengan sempurna di cangkir Anda.
+              Setiap musim, kami melakukan kurasi ketat untuk menghadirkan biji kopi signature yang mendefinisikan standar keunggulan kami. Biji kopi ini dipanen pada puncak kematangannya, memastikan setiap profil rasa dari nuansa buah yang cerah hingga kekentalan cokelat yang dalam terekspresi dengan sempurna di cangkir Anda.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-4">

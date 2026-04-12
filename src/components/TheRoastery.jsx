@@ -1,4 +1,3 @@
-import React from "react";
 
 /**
  * Data highlight roastery — fitur unggulan proses sangrai.
@@ -155,9 +154,9 @@ const TheRoastery = () => {
               {/* Secondary Detail Image Overlay */}
               <div className="absolute -bottom-12 -left-12 hidden lg:block w-48 h-48 overflow-hidden rounded-xl border-[12px] border-coffee-background dark:border-coffee-outline shadow-xl">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI0v92h6JMwf0Rz9iezQlkfyE1q2_gilfykygq5vAVTOM2bdjGrte46EhPsmAVMC4C4OcDLGmnaVazDGMoXi_xT3HPoS4MUp8IdKyOorUiD912J2m4cU1SCwOoqUq9pkT1Iv1aL5_dgzAhR4oFzR4x9n8yMPpyTOHoBzsgwzoLBn9HRjjkMY6gPe9qflMpY4h8GPqNLpJVigCqcN_ZGYa3ANDoImqrPArfQGPBAx5Agxj3vBoFJwy43zUJBS2Lx7k93Tp_Dn73grI"
+                  src="https://i.pinimg.com/1200x/71/b6/0f/71b60fc4aed9c88e0a81ba07c56d5768.jpg"
                   alt="Tangan artisan dengan hati-hati menimbang biji kopi hijau di atas permukaan kayu minimalis"
-                  className="w-full h-full object-cover dark:grayscale-[0.5]"
+                  className="w-full h-full rounded-xl object-cover dark:grayscale-[0.5]"
                 />
               </div>
             </div>
