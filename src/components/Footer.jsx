@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="text-2xl font-serif italic text-coffee-primary dark:text-coffee-cream mb-6">
             The Artisanal Monograph
           </div>
-          <p className="text-sm text-coffee-secondary dark:text-white/70 font-sans leading-relaxed mb-8 max-w-xs">
+          <p className="text-justify text-sm text-coffee-secondary dark:text-white/70 font-sans leading-relaxed mb-8 max-w-xs">
             Mendedikasikan diri untuk melestarikan kemurnian rasa melalui proses roasting batch kecil dan kurasi biji kopi terbaik dari seluruh nusantara dan dunia.
           </p>
           <div className="flex gap-4">
@@ -128,7 +128,7 @@ const Footer = () => {
         {/* Newsletter */}
         <div className="flex flex-col">
           <h4 className="font-serif text-lg text-coffee-primary dark:text-coffee-cream mb-8 font-bold">Journal</h4>
-          <p className="text-sm text-coffee-secondary dark:text-white/70 mb-6 font-sans">Dapatkan cerita kurasi kopi dan penawaran eksklusif langsung di email Anda.</p>
+          <p className="text-justify text-sm text-coffee-secondary dark:text-white/70 mb-6 font-sans">Dapatkan cerita kurasi kopi dan penawaran eksklusif langsung di email Anda.</p>
           <form className="flex flex-col gap-3">
             <input 
               className="bg-white dark:bg-coffee-deeproast border border-coffee-secondary/20 dark:border-coffee-outline px-4 py-3 rounded-full text-sm font-sans focus:ring-1 focus:ring-coffee-primary dark:focus:ring-coffee-goldlight focus:border-coffee-primary outline-none transition-colors duration-300 text-coffee-primary dark:text-coffee-cream placeholder:text-coffee-secondary/50 dark:placeholder:text-white/40" 
@@ -148,12 +148,12 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="pt-8 border-t border-coffee-secondary/20 dark:border-coffee-outline flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-[11px] text-coffee-secondary dark:text-white/70 font-sans tracking-widest">
-          @2026 Syhru. All rights reserved
+          &copy; {new Date().getFullYear()} Syhru. All rights reserved
         </div>
-        <div className="flex gap-8">
-          <a className="text-[11px] text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Terms of Service</a>
-          <a className="text-[11px] text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Accessibility</a>
-          <a className="text-[11px] text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Sustainability</a>
+        <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-3 mt-4 md:mt-0">
+          <a className="text-xs whitespace-nowrap text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Terms of Service</a>
+          <a className="text-xs whitespace-nowrap text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Accessibility</a>
+          <a className="text-xs whitespace-nowrap text-coffee-secondary dark:text-white/70 hover:text-coffee-accent dark:hover:text-coffee-goldlight transition-colors font-sans uppercase tracking-widest" href="#">Sustainability</a>
         </div>
       </div>
     </footer>

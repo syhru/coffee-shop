@@ -9,6 +9,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const location = useLocation();
   const isHomePage = location.pathname === '/';
@@ -43,7 +44,7 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`text-2xl font-serif italic transition-colors duration-500 ${isSolid ? 'text-coffee-primary' : 'text-[#E5C058]'} dark:text-coffee-goldlight`}
+          className={`text-xl sm:text-2xl font-serif italic transition-colors duration-500 ${isSolid ? 'text-coffee-primary' : 'text-[#E5C058]'} dark:text-coffee-goldlight`}
         >
           The Artisanal Monograph
         </Link>
@@ -93,12 +94,37 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <button
-            className="bg-coffee-goldlight  dark:text-coffee-midnight px-6 py-2.5 rounded-xl text-xs font-sans font-semibold uppercase tracking-[0.05rem] dark:bg-coffee-goldlight transition-all duration-300"
+            className="hidden md:block bg-coffee-goldlight dark:text-coffee-midnight px-6 py-2.5 rounded-xl text-xs font-sans font-semibold uppercase tracking-[0.05rem] dark:bg-coffee-goldlight transition-all duration-300"
             aria-label="Pesan kopi sekarang"
           >
             Pesan Sekarang
           </button>
+
+          <button 
+            className="md:hidden ml-4 p-2 text-coffee-primary dark:text-coffee-cream focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-coffee-background dark:bg-coffee-midnight shadow-lg border-t border-coffee-secondary/10 md:hidden flex flex-col p-4 gap-4">
+            <Link to="/our-beans" onClick={() => setIsMobileMenuOpen(false)} className="text-coffee-primary dark:text-coffee-cream font-label tracking-wide text-sm transition-colors hover:text-coffee-accent dark:hover:text-coffee-goldlight">Our Beans</Link>
+            <Link to="/roastery" onClick={() => setIsMobileMenuOpen(false)} className="text-coffee-primary dark:text-coffee-cream font-label tracking-wide text-sm transition-colors hover:text-coffee-accent dark:hover:text-coffee-goldlight">Roastery</Link>
+            <Link to="/brewing-guides" onClick={() => setIsMobileMenuOpen(false)} className="text-coffee-primary dark:text-coffee-cream font-label tracking-wide text-sm transition-colors hover:text-coffee-accent dark:hover:text-coffee-goldlight">Brewing Guides</Link>
+            <Link to="/subscription" onClick={() => setIsMobileMenuOpen(false)} className="text-coffee-primary dark:text-coffee-cream font-label tracking-wide text-sm transition-colors hover:text-coffee-accent dark:hover:text-coffee-goldlight">Subscription</Link>
+            <button className="w-full mt-2 bg-[#E5C058] text-[#120E0B] py-3 rounded-full font-bold text-sm tracking-widest editorial-shadow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+              PESAN SEKARANG
+            </button>
+          </div>
+        )}
       </nav>
     </header>
   );

@@ -81,10 +81,10 @@ const PlanCard = ({ name, subtitle, price, features, badge, isHighlighted }) => 
 
         <div className="mb-12">
           <h3 className="text-2xl font-serif mb-2 dark:text-coffee-cream">{name}</h3>
-          <p className="text-white/50 dark:text-coffee-cream font-sans text-sm mb-8">{subtitle}</p>
-          <div className="flex items-baseline gap-1">
-            <span className="text-4xl font-serif font-bold dark:text-coffee-goldlight">{price}</span>
-            <span className="text-white/50 dark:text-coffee-cream text-sm">/ month</span>
+          <p className="text-justify text-white/50 dark:text-coffee-cream font-sans text-sm mb-8">{subtitle}</p>
+          <div className="flex flex-row items-baseline justify-start gap-2 my-4 md:my-6">
+            <span className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold dark:text-coffee-goldlight whitespace-nowrap">{price}</span>
+            <span className="text-xs sm:text-sm text-white/50 dark:text-coffee-cream opacity-70 whitespace-nowrap">/ month</span>
           </div>
         </div>
 
@@ -118,14 +118,14 @@ const PlanCard = ({ name, subtitle, price, features, badge, isHighlighted }) => 
         <h3 className="text-2xl font-serif text-coffee-primary dark:text-coffee-cream mb-2">
           {name}
         </h3>
-        <p className="text-coffee-secondary dark:text-coffee-cream font-sans text-sm mb-8">
+        <p className="text-justify text-coffee-secondary dark:text-coffee-cream font-sans text-sm mb-8">
           {subtitle}
         </p>
-        <div className="flex items-baseline gap-1">
-          <span className="text-4xl font-serif font-bold text-coffee-primary dark:text-coffee-goldlight">
+        <div className="flex flex-row items-baseline justify-start gap-2 my-4 md:my-6">
+          <span className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-coffee-primary dark:text-coffee-goldlight whitespace-nowrap">
             {price}
           </span>
-          <span className="text-coffee-secondary dark:text-coffee-cream text-sm">/ month</span>
+          <span className="text-xs sm:text-sm text-coffee-secondary dark:text-coffee-cream opacity-70 whitespace-nowrap">/ month</span>
         </div>
       </div>
 
@@ -209,7 +209,7 @@ const SubscriptionPlans = () => {
             <br />
             Good Coffee
           </h2>
-          <p className="text-white/90 dark:text-coffee-cream max-w-xl mx-auto font-sans text-lg">
+          <p className="text-justify text-white/90 dark:text-coffee-cream max-w-xl mx-auto font-sans text-lg">
             Curated beans from sustainable estates, roasted to order and
             delivered to your doorstep on your schedule.
           </p>
@@ -225,7 +225,7 @@ const SubscriptionPlans = () => {
               <h2 className="text-3xl md:text-5xl font-serif text-coffee-primary dark:text-coffee-cream mb-4">
                 Choose Your Ritual
               </h2>
-              <p className="text-coffee-secondary dark:text-coffee-cream font-sans text-lg">
+              <p className="text-justify text-coffee-secondary dark:text-coffee-cream font-sans text-lg">
                 Select a plan that matches your consumption. Change or cancel
                 anytime without friction.
               </p>
@@ -269,7 +269,7 @@ const SubscriptionPlans = () => {
             <h2 className="text-3xl font-serif text-coffee-primary dark:text-coffee-cream mb-6">
               Roasted with Intention
             </h2>
-            <p className="text-coffee-secondary dark:text-coffee-cream font-sans mb-8 leading-relaxed">
+            <p className="text-justify text-coffee-secondary dark:text-coffee-cream font-sans mb-8 leading-relaxed">
               Unlike warehouse subscriptions, our beans are roasted in small
               batches only when your order is processed. We ship within 24 hours
               of roasting to ensure the oils and aromatics are at their peak

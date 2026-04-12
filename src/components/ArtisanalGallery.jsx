@@ -1,12 +1,12 @@
 
 const ArtisanalGallery = () => {
   return (
-    <section className="py-24 bg-coffee-secondary/5 dark:bg-[#181512]">
+    <section className="py-24 bg-coffee-background dark:bg-transparent">
       <div className="max-w-screen-2xl mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-lg">
             <h2 className="text-3xl md:text-5xl font-serif text-coffee-primary dark:text-coffee-cream mb-4 italic">The Artisanal Gallery</h2>
-            <p className="text-coffee-secondary dark:text-coffee-cream/80 font-sans">A visual exploration of our craft, from the raw earth to the finished pour.</p>
+            <p className="text-justify text-coffee-secondary dark:text-coffee-cream/80 font-sans">A visual exploration of our craft, from the raw earth to the finished pour.</p>
           </div>
           <div className="text-coffee-primary dark:text-coffee-goldlight font-serif italic text-xl border-b border-coffee-primary dark:border-coffee-outline pb-2 hidden md:block">
             Est. 2024

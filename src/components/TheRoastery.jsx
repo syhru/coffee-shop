@@ -44,7 +44,7 @@ const HighlightItem = ({ icon, title, description }) => {
         <h3 className="font-bold text-coffee-primary dark:text-coffee-cream font-sans tracking-wide uppercase text-sm">
           {title}
         </h3>
-        <p className="text-coffee-secondary dark:text-coffee-cream font-sans">{description}</p>
+        <p className="text-justify text-coffee-secondary dark:text-coffee-cream font-sans">{description}</p>
       </div>
     </div>
   );
@@ -84,7 +84,7 @@ const TheRoastery = () => {
                 </h2>
               </header>
 
-              <p className="text-lg md:text-xl text-coffee-secondary dark:text-coffee-cream leading-relaxed font-sans max-w-prose">
+              <p className="text-justify text-lg md:text-xl text-coffee-secondary dark:text-coffee-cream leading-relaxed font-sans max-w-prose">
                 Our philosophy is rooted in patience and precision. Each day,
                 our head roaster monitors every flame and airflow adjustment,
                 roasting in{" "}
@@ -173,7 +173,7 @@ const TheRoastery = () => {
           <h2 className="text-3xl md:text-4xl font-serif text-coffee-primary dark:text-coffee-cream">
             Join the Monograph
           </h2>
-          <p className="text-coffee-secondary dark:text-coffee-cream font-sans text-lg max-w-xl mx-auto">
+          <p className="text-justify text-coffee-secondary dark:text-coffee-cream font-sans text-lg max-w-xl mx-auto">
             Receive stories from the source, brewing secrets, and early access
             to our seasonal single-origin releases.
           </p>

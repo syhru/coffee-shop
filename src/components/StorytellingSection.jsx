@@ -1,7 +1,7 @@
 
 const StorytellingSection = () => {
   return (
-    <section className="py-24 px-6 md:px-16 lg:px-24 bg-coffee-secondary/5 dark:bg-[#120E0B] overflow-hidden">
+    <section className="py-24 px-6 md:px-16 lg:px-24 bg-coffee-background dark:bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         <div className="w-full lg:w-3/5 order-2 lg:order-1 relative">
           <div className="relative rounded-2xl overflow-hidden editorial-shadow group aspect-[16/10] md:aspect-[16/9]">
@@ -25,10 +25,10 @@ const StorytellingSection = () => {
                 Aroma yang Memikat, Rasa yang <span className="italic">Tak Terlupakan</span>
               </h2>
               <div className="w-16 h-1 bg-coffee-primary/20 dark:bg-coffee-outline mb-8"></div>
-              <p className="font-sans text-lg text-coffee-secondary dark:text-coffee-cream/80 leading-relaxed mb-6">
+              <p className="text-justify font-sans text-lg text-coffee-secondary dark:text-coffee-cream/80 leading-relaxed mb-6">
                 Setiap biji kopi yang kami pilih membawa karakteristik unik dari tanah tempatnya tumbuh. Dari aroma floral yang lembut hingga body coklat yang kaya, kami memastikan setiap profil rasa terekstraksi sempurna.
               </p>
-              <p className="font-sans text-base text-coffee-secondary/80 dark:text-coffee-cream/60 italic border-l-2 border-coffee-secondary/30 dark:border-coffee-outline pl-6 py-2">
+              <p className="text-justify font-sans text-base text-coffee-secondary/80 dark:text-coffee-cream/60 italic border-l-2 border-coffee-secondary/30 dark:border-coffee-outline pl-6 py-2">
                 Kami percaya bahwa kopi bukan sekadar minuman, melainkan jembatan antara petani, roaster, dan Anda. Setiap cangkir adalah sebuah narasi tentang perjalanan dari kebun hingga ke tangan Anda.
               </p>
             </div>

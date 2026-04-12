@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import ArtisanalGallery from "../components/ArtisanalGallery";
 import HeroSection from "../components/HeroSection";
 import PhilosophySection from "../components/PhilosophySection";
@@ -49,13 +49,13 @@ const Home = () => {
 
     // Membersihkan interval ketika komponen unmount
     return () => clearInterval(interval);
-  }, []);
+  }, [currentIndex]);
 
   return (
     <main className="min-h-screen flex flex-col">
       <HeroSection />
       
-      <div className="max-w-[1920px] mx-auto w-full relative z-10 -mt-16 md:-mt-32 bg-coffee-background dark:bg-coffee-midnight rounded-[40px] md:rounded-[60px] lg:rounded-[80px] shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.3)] overflow-hidden mb-0">
+      <div className="max-w-[1920px] mx-auto w-full relative z-10 -mt-8 md:-mt-16 lg:-mt-32 bg-coffee-background dark:bg-coffee-midnight rounded-[24px] md:rounded-[50px] lg:rounded-[80px] shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.3)] overflow-hidden mb-0 px-4 py-8 sm:p-8 md:p-12 lg:p-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
           <StorytellingSection />
         </motion.div>
@@ -63,7 +63,7 @@ const Home = () => {
       {/* Signature Quote Carousel Section */}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
       <section
-        className="bg-coffee-secondary/5 dark:bg-coffee-deeproast dark:border-y dark:border-coffee-outline py-16 md:py-24 px-6 md:px-16 text-center transition-colors duration-300"
+        className="bg-coffee-background-deeproast  py-16 md:py-24 px-6 md:px-16 text-center transition-colors duration-300"
         aria-label="Kutipan khas kedai kopi"
       >
         <div className="flex flex-col items-center justify-center">

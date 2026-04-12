@@ -1,7 +1,7 @@
 
 const SignatureSelection = () => {
   return (
-    <section className="py-24 px-6 md:px-16 lg:px-24 bg-coffee-background dark:bg-[#120E0B] overflow-hidden">
+    <section className="py-24 px-6 md:px-16 lg:px-24 bg-coffee-background dark:bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 relative">
@@ -24,7 +24,7 @@ const SignatureSelection = () => {
           <div className="lg:col-span-5 lg:pl-12 mt-12 lg:mt-0">
             <span className="text-coffee-accent dark:text-coffee-goldlight font-sans uppercase tracking-[0.2em] text-xs mb-4 block">The Artisanal Selection</span>
             <h2 className="font-serif text-4xl text-coffee-primary dark:text-coffee-cream mb-6">Mahakarya Biji Kopi <span className="italic">Signature</span> Kami</h2>
-            <p className="font-sans text-lg text-coffee-secondary dark:text-coffee-cream/80 leading-relaxed mb-8">
+            <p className="text-justify font-sans text-lg text-coffee-secondary dark:text-coffee-cream/80 leading-relaxed mb-8">
               Setiap musim, kami melakukan kurasi ketat untuk menghadirkan biji kopi signature yang mendefinisikan standar keunggulan kami. Biji kopi ini dipanen pada puncak kematangannya, memastikan setiap profil rasa dari nuansa buah yang cerah hingga kekentalan cokelat yang dalam terekspresi dengan sempurna di cangkir Anda.
             </p>
             <div className="space-y-4">
@@ -32,14 +32,14 @@ const SignatureSelection = () => {
                 <span className="material-symbols-outlined text-coffee-primary dark:text-coffee-goldlight mt-1">grade</span>
                 <div>
                   <h4 className="font-bold text-coffee-primary dark:text-coffee-cream">Kualitas Terkurasi</h4>
-                  <p className="text-sm text-coffee-secondary dark:text-coffee-cream/70">Hanya 5% teratas dari hasil panen terbaik yang memenuhi standar signature kami.</p>
+                  <p className="text-justify text-sm text-coffee-secondary dark:text-coffee-cream/70">Hanya 5% teratas dari hasil panen terbaik yang memenuhi standar signature kami.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-coffee-primary dark:text-coffee-goldlight mt-1">local_fire_department</span>
                 <div>
                   <h4 className="font-bold text-coffee-primary dark:text-coffee-cream">Roasting Presisi</h4>
-                  <p className="text-sm text-coffee-secondary dark:text-coffee-cream/70">Profil sangrai yang dikembangkan khusus untuk menonjolkan karakter unik setiap lot.</p>
+                  <p className="text-justify text-sm text-coffee-secondary dark:text-coffee-cream/70">Profil sangrai yang dikembangkan khusus untuk menonjolkan karakter unik setiap lot.</p>
                 </div>
               </div>
             </div>

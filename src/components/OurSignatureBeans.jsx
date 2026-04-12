@@ -102,7 +102,7 @@ const BeanCard = ({ name, flavorNote, badge, price, image, imageAlt, isOffset })
         <h3 className="font-serif text-2xl text-coffee-primary dark:text-coffee-cream mb-2">
           {name}
         </h3>
-        <p className="font-sans text-coffee-secondary dark:text-coffee-cream mb-6 text-sm italic">
+        <p className="text-justify font-sans text-coffee-secondary dark:text-coffee-cream mb-6 text-sm italic">
           {flavorNote}
         </p>
 
@@ -181,7 +181,7 @@ const OurSignatureBeans = () => {
 
       {/* Bottom CTA */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-20 text-center">
-        <p className="font-sans text-coffee-secondary dark:text-coffee-cream mb-4 italic">
+        <p className="text-justify font-sans text-coffee-secondary dark:text-coffee-cream mb-4 italic">
           Can&apos;t find your match?
         </p>
         <button

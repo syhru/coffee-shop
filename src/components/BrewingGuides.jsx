@@ -75,7 +75,7 @@ const BrewCard = ({ title, badge, duration, description, image, imageAlt }) => {
           </span>
         </div>
 
-        <p className="text-coffee-secondary dark:text-coffee-cream font-sans text-sm leading-relaxed mb-6">
+        <p className="text-justify text-coffee-secondary dark:text-coffee-cream font-sans text-sm leading-relaxed mb-6">
           {description}
         </p>
 
@@ -123,7 +123,7 @@ const BrewingGuides = () => {
           <h2 className="text-5xl md:text-7xl font-serif text-coffee-primary dark:text-coffee-cream italic leading-tight tracking-tighter mb-8">
             Master Your Brew
           </h2>
-          <p className="text-lg text-coffee-secondary dark:text-coffee-cream font-sans leading-relaxed max-w-xl">
+          <p className="text-justify text-lg text-coffee-secondary dark:text-coffee-cream font-sans leading-relaxed max-w-xl">
             Great coffee begins with the source, but ends with the technique.
             Explore our curated guides to perfecting the craft of slow-pour
             coffee from the comfort of your kitchen.
@@ -154,7 +154,7 @@ const BrewingGuides = () => {
           <h2 className="font-serif text-3xl text-coffee-primary dark:text-coffee-cream italic mb-6">
             Missing the right gear?
           </h2>
-          <p className="font-sans text-coffee-secondary dark:text-coffee-cream max-w-md mx-auto mb-10 leading-relaxed">
+          <p className="text-justify font-sans text-coffee-secondary dark:text-coffee-cream max-w-md mx-auto mb-10 leading-relaxed">
             Our roastery shop stocks the exact tools used in our guides, curated
             for their durability and precision.
           </p>
