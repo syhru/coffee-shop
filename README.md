@@ -46,10 +46,8 @@ src/
 │   ├── OurBeans.jsx
 │   ├── Roastery.jsx
 │   └── Subscription.jsx
-├── App.jsx              # Main Entry & Route Definer
-├── App.css              # Global Application Styles
-├── index.css            # Tailwind Base & CSS Vartiables
-└── main.jsx             # DOM Injection Entry
+└── App.jsx              # Main Entry & Route Definer
+
 ```
 
 ## 🚀 Getting Started
@@ -98,7 +96,7 @@ This project successfully passed comprehensive Senior-level QA inspections:
 
 ## 🤝 Contribution
 
-This is an ongoing project designed for a premium portfolio. Feel free to `fork` and submit a Pull Request if you spot UI friction points .
+This is an ongoing project designed for a premium portfolio. Feel free to `fork` and submit a Pull Request if you spot UI friction points.
 
 ## 📜 License
 
