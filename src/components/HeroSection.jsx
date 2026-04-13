@@ -48,7 +48,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
-        src="/videos/coffee-bg.mp4"
+        src="https://rkzbwjkcqpqabyfkofzw.supabase.co/storage/v1/object/public/assets/coffee-bg.mp4"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
